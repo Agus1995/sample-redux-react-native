@@ -15,6 +15,7 @@ export default class Login extends Component<Props> {
           password: String
         }
       }
+      
   render() {
     return (
       <Container>
@@ -36,12 +37,12 @@ export default class Login extends Component<Props> {
                 <Text> Password </Text>
                 <TextInput
                     style={styles.formSize}
-                    onChangeText={(text) => this.setState({password: text})}
+                    onChangeText={(text) => a = text}
                 />
             </View>
 
             <Button style ={styles.buttonStyle}
-                onPress={() => this._login(this.state.username, this.state.password)}
+                onPress={() => this.showtext(this.a)}
             >
               <Text> Login </Text>
             </Button>
@@ -58,6 +59,10 @@ export default class Login extends Component<Props> {
     if(islogin){
         this.props.navigation.navigate('home');
     }
+  }
+
+  showtext = (al) =>{
+    alert(al);
   }
 
   _loginProccess = (query) =>{
